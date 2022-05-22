@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de projetos | Arthur Silva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="header">
+            <div class="checkbox-container">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="toggle">
+                    <label class="checkbox" for="toggle">
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                    </label>
+                    <div class="menu">
+                        <nav class="menu-items">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#aboutme">About me</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>Arthur Silva</h1>
+        <h2 id="type-container"></h2>
+        <div class="social-media">
+            <a href="#">LinkedIn</a>
+            <a href="#">Github</a>
+        </div>
+    </header>
+    <main class="container">
+        <a id="projects"></a>
+        <div class="container-header">
+            <h1>meet some projects</h1>
+            <span class="header-line"></span>
+        </div>
+        <div class="card-container">
+            <div class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsa quasi expedita similique praesentium dolorem sequi exercitationem aspernatur ipsam? Id assumenda aut minus cumque commodi fugiat officiis doloremque eveniet modi.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque dolorum, omnis earum maiores reprehenderit at fugiat debitis reiciendis voluptate rerum sit amet mollitia quibusdam nesciunt incidunt voluptatum expedita commodi assumenda.
+            </div>
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>Github</h2>
+                    <p>Conheça o projeto</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>LinkedIn</h2>
+                    <p>Conheça o projeto</p>
+                </div>
+            </div>
+            <div class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsa quasi expedita similique praesentium dolorem sequi exercitationem aspernatur ipsam? Id assumenda aut minus cumque commodi fugiat officiis doloremque eveniet modi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque voluptas ducimus vero error at quasi temporibus delectus nostrum laboriosam, magnam nihil maxime velit dicta repellendus minus recusandae ad officiis.
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsa quasi expedita similique praesentium dolorem sequi exercitationem aspernatur ipsam? Id assumenda aut minus cumque commodi fugiat officiis doloremque eveniet modi.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus reiciendis aut laudantium totam temporibus nulla molestias, blanditiis dignissimos, nam voluptas eius aperiam tempora voluptate! Dolor explicabo expedita quo voluptatum ut.
+            </div>
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>Github</h2>
+                    <p>Conheça o projeto</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="container">
+        <a id="aboutme"></a>
+        <div class="container-header">
+            <img src="img/profile-bg.png" />
+            <h1>about me</h1>
+            <span class="header-line header-line-img"></span>
+            <div class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsa quasi expedita similique praesentium dolorem sequi exercitationem aspernatur ipsam? Id assumenda aut minus cumque commodi fugiat officiis doloremque eveniet modi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque voluptas ducimus vero error at quasi temporibus delectus nostrum laboriosam, magnam nihil maxime velit dicta repellendus minus recusandae ad officiis.
+            </div>
+        </div>
+    </main>
+    <a href="#" id="top"></a>
+    <footer class="footer">
+        Made by Arthur Silva
+    </footer>
+</body>
+<script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
+<script type="text/javascript">
+
+    const top_button = document.getElementById('top');
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            top_button.style.display = 'block';
+        } else {
+            top_button.style.display = 'none';
+        }
+    };
+
+
+    [...document.querySelectorAll('.menu .menu-items ul li a')].map(x =>
+        x.addEventListener('click', function(){
+            document.getElementById('toggle').click();
+    }));
+    
+
+    new TypeIt("#type-container", {
+        speed: 150,
+        loop: true,
+    })
+    .type("I am", { delay: 3000 })
+    .delete()
+    .type("a fullstack developer", { delay: 3000 })
+    .delete()
+    .type("and a code lover", { delay: 3000 })
+    .delete()
+    .type("so much!", { delay: 3000 })
+    .delete()
+    .type("let's see my projects?", { delay: 5000 })
+    .go();
+
+</script>
+</html>

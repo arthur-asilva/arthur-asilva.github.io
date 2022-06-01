@@ -1,0 +1,115 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+main{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(15deg, #2d3436 0%, #000000 74%);
+  background-size: 400% 400%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: relative;
+  animation: backgroundTransition 3s ease-in-out infinite;
+}
+
+@keyframes backgroundTransition{
+    0%{ background-position: 0% 80%; }
+    50%{ background-position: 90% 100%; }
+    100%{ background-position: 0% 80%; }
+}
+
+.container{
+  width: 600px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card{
+  width: 152px;
+  height: 230px;
+  background: #1cb0f6;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  border: 4px solid #1899d6;
+  border-radius: 9px;
+  transform-style: preserve-3d;
+  transition: transform .9s;
+}
+
+.card:hover{
+  transform: scale(1.03);
+}
+
+.front-card{
+  transform: rotateY(180deg);
+}
+
+.front-card, .back-card{
+  position: absolute;
+  width: 152px;
+  display: block;
+  background: #1cb0f6;
+  backface-visibility: hidden;
+  transition: 0.3s;
+}
+
+.card.flip{
+  transform: rotateY(180deg);
+}
+
+.disableCard{
+  opacity: 0.6;
+}
+
+.splash-screen{
+  font-family: 'Odibee Sans', cursive;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  background: #1899d6;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.splash-screen h1{
+  font-size: 10rem;
+  color: white;
+  text-shadow: 4px 4px 1px #000;
+}
+
+.splash-screen #restart{
+  font-family: 'Odibee Sans', cursive;
+  font-size: 30px;
+  line-height: 60px;
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  color: #1899d6;
+  letter-spacing: 4px;
+  background: white;
+  box-shadow: 2px 3px 1px #000;
+  margin-top: -100px;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.splash-screen #restart:hover{
+  color: #000;
+}

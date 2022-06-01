@@ -254,6 +254,11 @@ h2{
     transition: 0.3s;
 }
 
+.card-wrapper #checkbox{
+    position: absolute;
+    z-index: 998;
+}
+
 .card-wrapper::before{
     content: '';
     position: absolute;
@@ -283,8 +288,9 @@ h2{
     transition: 0.3s;
 }
 
-.card-wrapper p{
+.card-wrapper p, .card-wrapper label{
     opacity: 0;
+    width: 100%;
     transition: 0.3s;
     text-align: center;
     font-weight: lighter;
@@ -295,11 +301,11 @@ h2{
 }
 
 .card:hover > .card-wrapper::before{
-    width: 290px;
+    width: 350px;
     opacity: 1;
 }
 
-.card:hover > .card-wrapper p{
+.card:hover > .card-wrapper p, .card:hover > .card-wrapper label{
     margin-left: 0px;
     opacity: 1;
 }

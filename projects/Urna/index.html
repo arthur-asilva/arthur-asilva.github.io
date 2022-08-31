@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>URNA ELEITORAL</title>
+        <link href="assets/styles.css" rel="stylesheet" />
+    </head>
+    <body class="flex center-content">
+        <div class="container flex">
+            <div class="container__screen flex center-content">
+                <h1 id="vote_value"></h1>
+                <img id="candidate_img" src="assets/images/default.png" />
+                <label id="candidate_name"></label>
+            </div>
+            <div class="container__keyboard flex center-content">
+                <div class="numeric_container"></div>
+                <div class="control_keys">
+                    <button onclick="blankVote()" class="branco">branco</button>
+                    <button onclick="eraseCurrent()" class="corrigir">corrigir</button>
+                    <button onclick="confirmVote()" class="confirmar">confirmar</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="assets/main.js"></script>
+</html>
